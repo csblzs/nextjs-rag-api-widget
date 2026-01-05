@@ -1,0 +1,5 @@
+**/.env*
+**/node_modules
+**/.next
+**/hnswlib-index
+backend-rag-api/app/api/rag/route.ts

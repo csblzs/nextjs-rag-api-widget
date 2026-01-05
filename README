@@ -1,0 +1,94 @@
+AiChat — Next.js RAG API + Embeddable Chat Widget
+
+This repository contains a Next.js-based RAG (Retrieval-Augmented Generation) backend API and an embeddable frontend chat widget.
+
+Repository Structure
+.
+├── backend-rag-api     # API routes, document indexing, RAG logic
+└── frontend-widget    # Embeddable chat UI (iframe / script-based)
+
+Prerequisites
+
+Docker (recommended)
+
+Node.js 20+ (for local development)
+
+Linux build tools (build-essential, python3, etc.)
+required for building the native hnswlib-node module
+
+Environment Variables
+
+Required:
+
+GEMINI_API_KEY=your_api_key_here
+
+
+Required only for the RAG endpoint:
+
+COHERE_API_KEY=your_api_key_here
+
+
+Optional:
+
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+
+Quick Start (Docker)
+
+Build and start the backend:
+
+docker compose up --build
+
+
+Load and index documents:
+
+docker exec rag_api npm run load-data
+
+
+⚠️ The RAG API will not return valid results until indexing is completed.
+
+Local Development
+Backend
+cd backend-rag-api
+npm install
+npm run dev
+npm run load-data
+
+Frontend Widget
+cd frontend-widget
+npm install
+npm run dev
+
+API Endpoints
+Chat (LLM-based response)
+
+POST /api/chat
+
+curl -X POST http://localhost:3000/api/chat \
+  -H "Content-Type: application/json" \
+  -d '{
+    "message": "Hello! How can you help me?"
+  }'
+
+RAG (Document-aware response)
+
+POST /api/rag
+
+curl -X POST http://localhost:3000/api/rag \
+  -H "Content-Type: application/json" \
+  -d '{
+    "query": "What is described in the documentation?"
+  }'
+
+Troubleshooting
+
+CORS errors
+Verify the NEXT_PUBLIC_BASE_URL value and backend CORS configuration.
+
+Missing index
+The /api/rag endpoint requires running npm run load-data beforehand.
+
+Native build errors (hnswlib-node)
+Ensure all required Linux build tools are installed.
+
+Invalid or missing environment variables
+Confirm that GEMINI_API_KEY (and COHERE_API_KEY for RAG) are correctly set at runtime.

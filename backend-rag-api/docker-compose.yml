@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  # ----------------------------------------------------
+  # 1. Backend API (rag_api)
+  # ----------------------------------------------------
+  rag_api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rag_api
+    ports:
+      - "3000:3000"
+    # A HNSWLib indexfájljait a konténerbe mentjük
+    volumes:
+      # EZ A RÉSZ HELYES, ÉS TARTALMAZZA A CIKLUSI ÚTVONALAT
+      - hnsw_index_data:/app/hnswlib-index
+    environment:
+      NODE_ENV: production 
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+      COHERE_API_KEY: ${COHERE_API_KEY}
+    
+# ----------------------------------------------------
+# GYÖKÉR SZINTŰ VOLUME DEFINÍCIÓ (MAPPING)
+# ----------------------------------------------------
+volumes:
+  # Nincs kötőjel, és csak a volume nevet definiálja. 
+  # Ez volt az, amit a Docker "mapping"-nek akart.
+  hnsw_index_data:

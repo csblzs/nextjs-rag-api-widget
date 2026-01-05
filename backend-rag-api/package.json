@@ -1,0 +1,31 @@
+{
+  "name": "backend-rag-api",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "load-data": "ts-node scripts/load-data.ts"
+  },
+  "dependencies": {
+    "next": "14.2.3",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "typescript": "5.4.5",
+    "@types/node": "20.14.2",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "ts-node": "10.9.2",
+    "dotenv": "16.4.5",
+    "hnswlib-node": "^3.0.0",
+    "@langchain/community": "latest",
+    "@langchain/core": "latest",
+    "@langchain/google-genai": "latest",
+    "langchain": "latest"
+  },
+  "devDependencies": {
+    "@types/dotenv": "8.2.0"
+  }
+}

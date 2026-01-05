@@ -1,0 +1,71 @@
+I. Cégprofil
+
+A NovaTech Solutions Zrt. 1998-ban alakult, székhelye Szilícium-völgyben található. Cégünk az AI-alapú szoftveres megoldásokra és a kiberbiztonsági infrastruktúra fejlesztésére specializálódott. Jelenleg 450 alkalmazottat foglalkoztatunk globálisan, főleg a kutatás-fejlesztés területén. Fő célunk a vállalati folyamatok automatizálása és a digitális infrastruktúra védelme.
+II. Garancia és Támogatás
+
+Minden hardveres és szoftveres licencre 2 év teljes körű garanciát biztosítunk. A technikai támogatás alapvető szintje ingyenes, a Prémium 24/7/365 támogatás havi 12 000 Ft/fő áron érhető el.
+III. Termékportfólió
+
+A NovaTech portfóliója két fő területre oszlik: AI Platformok (NT-AI) és Hálózati Hardverek (NT-HW).
+A. NT-AI Platformok (Szoftver licenc / 1 év)
+Azonosító	Terméknév	Leírás	Ár (ÁFA nélkül)
+NT-AI-01	PrismaFlow Core	Vállalati szintű adatelemző motor, valós idejű BI-hoz.	450 000 Ft
+NT-AI-02	Cognito Shield	AI-alapú fenyegetésészlelés a hálózaton. Autonóm reakció.	720 000 Ft
+NT-AI-03	OptiRoute CRM	Mesterséges intelligenciával optimalizált értékesítési útvonaltervező modul.	310 000 Ft
+NT-AI-04	DataVault Encrypt	Kvantumbiztos, end-to-end titkosító szoftvercsomag.	590 000 Ft
+NT-AI-05	Synergy HR Bot	AI-asszisztens, amely automatizálja a toborzási folyamat első lépéseit.	280 000 Ft
+NT-AI-06	Predictive Stock	Készletszint-előrejelző algoritmus gyártóvállalatoknak.	650 000 Ft
+NT-AI-07	AutoCompile Dev	Kódgeneráló eszköz, amely csökkenti a fejlesztési időt 30%-kal.	880 000 Ft
+NT-AI-08	Sentinel Log	Rendszeres eseménynapló (log) elemző és hibakereső.	180 000 Ft
+NT-AI-09	DeepTrace Audit	Teljes hálózati forgalomvizsgálat AI-alapon, compliance ellenőrzés.	950 000 Ft
+NT-AI-10	Quantum Leap API	Kísérleti hozzáférés a következő generációs generatív AI motorhoz.	1 200 000 Ft
+B. NT-HW Hálózati Hardverek (Egyszeri vásárlás)
+Azonosító	Terméknév	Leírás	Ár (ÁFA nélkül)
+NT-HW-11	Firewall X-100	Alapszintű, gyors hardveres tűzfal KKV-k számára. 10Gbps átviteli sebesség.	150 000 Ft
+NT-HW-12	CipherSwitch S5	48 portos Gigabit PoE switch, Layer 3 támogatással.	290 000 Ft
+NT-HW-13	MicroRouter R8	Kompakt VPN router távoli irodák számára.	85 000 Ft
+NT-HW-14	TeraStorage Unit	10TB kapacitású, titkosított hálózati adattároló egység (NAS).	420 000 Ft
+NT-HW-15	Quantum Key Gen	Fizikai hardverkulcs generátor kéttényezős hitelesítéshez (2FA).	35 000 Ft
+NT-HW-16	Server Rack 42U	Professzionális szerver rack szekrény hűtőrendszerrel.	550 000 Ft
+NT-HW-17	Optic Fiber Kit	Optikai szálas csatlakozó és kábelkészlet nagy sebességű hálózatokhoz.	110 000 Ft
+NT-HW-18	PoE Injector Max	Magas teljesítményű Power over Ethernet (PoE) injektor.	22 000 Ft
+NT-HW-19	ZeroClient Thin	Vékony kliens virtualizált asztali környezetekhez.	195 000 Ft
+NT-HW-20	Cloud Bridge Mod	5G/6G modem modul felhőszolgáltatásokhoz való gyors kapcsolódáshoz.	380 000 Ft
+
+Kiváló ötlet! A részletes Általános Szerződési Feltételek (ÁSZF) és a céginformációk indexelése a RAG rendszerben maximalizálja az AI válaszok pontosságát, különösen jogi és logisztikai kérdések esetén.
+
+Készítettem egy kiterjesztett, immár jogi és logisztikai szempontokkal kiegészített ÁSZF-et, melyet integrálhat a korábbi "NovaTech Solutions" dokumentumba.
+📄 Bővített Bemeneti Dokumentum: NovaTech Solutions (ÁSZF Kiegészítés)
+
+Kérem, adja hozzá az alábbi szakaszt a korábbi terméklistát és cégprofilt tartalmazó fájljához (document.txt):
+IV. Általános Szerződési Feltételek (ÁSZF)
+1. Árak és Fizetés
+
+    Árfolyam: Minden ár Forintban (Ft) van megadva, és nem tartalmazza az ÁFÁ-t. A megrendelés leadásakor érvényes ár a mérvadó.
+
+    Fizetési feltétel: Alapértelmezett fizetési határidő a számla kiállításától számított 15 naptári nap. Új partnerek számára az első két rendelés esetén előreutalás szükséges.
+
+    Késedelmi kamat: Késedelmes fizetés esetén a hatályos jegybanki alapkamat kétszerese kerül felszámításra.
+
+2. Szállítás és Teljesítés
+
+    Szállítási idő (Hardver): A megrendelt NT-HW termékeket a raktárkészlet függvényében, de legfeljebb 5 munkanapon belül indítjuk el.
+
+    Szállítási díj: Belföldi szállítás esetén fix 5.000 Ft szállítási díj kerül felszámításra. A 750.000 Ft feletti rendelések szállítási díja ingyenes.
+
+    Kockázat átszállása: A kárveszély a termékek vevő részére történő átadásakor száll át.
+
+3. Szoftverlicenc Felhasználási Feltételek
+
+    Licenc jellege: Az NT-AI platformok licencdíja kizárólag a szoftver használati jogát biztosítja egy adott időtartamra (1 év), nem pedig a tulajdonjogát.
+
+    Felhasználási korlát: A licenc az adott szervezet telephelyén belül korlátlan számú felhasználó számára érvényes, de tilos a szoftver bérbeadása, al-licencbe adása vagy harmadik fél számára történő értékesítése.
+
+    Frissítések: Az 1 éves licenc tartalmazza az összes kisebb (minor) frissítést (pl. 2.0-ról 2.1-re), de nem tartalmazza a főverzió frissítéseket (pl. 2.0-ról 3.0-ra), melyek külön díjszabás alá esnek.
+
+4. Képzés és Bevezetés
+
+    Bevezető képzés: Az NT-AI-01 és NT-AI-02 platformok vásárlása esetén a vételár tartalmaz egy 8 órás, személyes bevezető képzést 3 fő részére.
+
+    További képzés: Minden más termék esetében a képzés opcionális, 45 000 Ft/óra/fő áron rendelhető.
+
