@@ -1,94 +1,122 @@
-AiChat — Next.js RAG API + Embeddable Chat Widget
+# AiChat
 
-This repository contains a Next.js-based RAG (Retrieval-Augmented Generation) backend API and an embeddable frontend chat widget.
+Next.js-based RAG (Retrieval-Augmented Generation) backend API + an embeddable chat widget.
 
-Repository Structure
+## Contents
+
+- [Structure](#structure)
+- [Prerequisites](#prerequisites)
+- [Configuration (.env)](#configuration-env)
+- [Quickstart (Docker)](#quickstart-docker)
+- [Local development](#local-development)
+- [API endpoints](#api-endpoints)
+- [Troubleshooting](#troubleshooting)
+
+## Structure
+
+```
 .
-├── backend-rag-api     # API routes, document indexing, RAG logic
-└── frontend-widget    # Embeddable chat UI (iframe / script-based)
+├── backend-rag-api/      # API routes, indexing, RAG logic
+└── frontend-widget/     # embeddable chat UI (Next.js)
+```
 
-Prerequisites
+## Prerequisites
 
-Docker (recommended)
+- **Docker + Docker Compose** (recommended)
+- **Node.js 20+** (for local development)
+- On Linux (local builds): `build-essential`, `python3`, etc. (required by the native `hnswlib-node` module)
 
-Node.js 20+ (for local development)
+## Configuration (.env)
 
-Linux build tools (build-essential, python3, etc.)
-required for building the native hnswlib-node module
+**Required (backend):**
 
-Environment Variables
-
-Required:
-
+```bash
 GEMINI_API_KEY=your_api_key_here
+```
 
+**Only if you use the RAG endpoint (/api/rag):**
 
-Required only for the RAG endpoint:
-
+```bash
 COHERE_API_KEY=your_api_key_here
+```
 
+**Optional (frontend):**
 
-Optional:
-
+```bash
 NEXT_PUBLIC_BASE_URL=http://localhost:3000
+```
 
-Quick Start (Docker)
+Note: never commit real keys to a public repository. Keep secrets in `.env` locally and publish an `.env.example` template instead.
 
-Build and start the backend:
+## Quickstart (Docker)
 
+### 1) Start the backend
+
+```bash
+cd backend-rag-api
 docker compose up --build
+```
 
+### 2) Index the documents
 
-Load and index documents:
+```bash
+docker exec -it rag_api npm run load-data
+```
 
-docker exec rag_api npm run load-data
+Important: document-based retrieval works properly only after indexing has completed.
 
+## Local development
 
-⚠️ The RAG API will not return valid results until indexing is completed.
+### Backend
 
-Local Development
-Backend
+```bash
 cd backend-rag-api
 npm install
 npm run dev
-npm run load-data
+```
 
-Frontend Widget
+Indexing locally:
+
+```bash
+cd backend-rag-api
+npm run load-data
+```
+
+### Frontend widget
+
+```bash
 cd frontend-widget
 npm install
 npm run dev
+```
 
-API Endpoints
-Chat (LLM-based response)
+## API endpoints
 
-POST /api/chat
+Base URL: `http://localhost:3000`
 
-curl -X POST http://localhost:3000/api/chat \
+### Chat (LLM response)
+
+`POST /api/chat`
+
+```bash
+curl -s http://localhost:3000/api/chat \
   -H "Content-Type: application/json" \
-  -d '{
-    "message": "Hello! How can you help me?"
-  }'
+  -d '{"question":"Hello"}'
+```
 
-RAG (Document-aware response)
+### RAG (document-aware response)
 
-POST /api/rag
+`POST /api/rag`
 
-curl -X POST http://localhost:3000/api/rag \
+```bash
+curl -s http://localhost:3000/api/rag \
   -H "Content-Type: application/json" \
-  -d '{
-    "query": "What is described in the documentation?"
-  }'
+  -d '{"question":"What is described in the documentation?"}'
+```
 
-Troubleshooting
+## Troubleshooting
 
-CORS errors
-Verify the NEXT_PUBLIC_BASE_URL value and backend CORS configuration.
-
-Missing index
-The /api/rag endpoint requires running npm run load-data beforehand.
-
-Native build errors (hnswlib-node)
-Ensure all required Linux build tools are installed.
-
-Invalid or missing environment variables
-Confirm that GEMINI_API_KEY (and COHERE_API_KEY for RAG) are correctly set at runtime.
+- **CORS errors**: verify `NEXT_PUBLIC_BASE_URL` and the backend CORS configuration.
+- **Missing index**: run indexing (`npm run load-data`) before using `/api/rag`.
+- **Native build errors (`hnswlib-node`)**: install build tools (`build-essential`, `python3`, …).
+- **Missing env vars**: `GEMINI_API_KEY` is required; `/api/rag` also needs `COHERE_API_KEY`.
