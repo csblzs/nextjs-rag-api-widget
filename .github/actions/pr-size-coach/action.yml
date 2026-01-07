@@ -1,0 +1,34 @@
+name: "PR Size Coach"
+description: "Labels and comments on PR size based on changed files and line counts."
+author: "You"
+inputs:
+  github-token:
+    description: "GitHub token (usually secrets.GITHUB_TOKEN)."
+    required: true
+  add-labels:
+    description: "Whether to add size labels (true/false)."
+    required: false
+    default: "true"
+  comment:
+    description: "Whether to comment on the PR (true/false)."
+    required: false
+    default: "true"
+  small-threshold:
+    description: "Max total changed lines (add+del) for size/S."
+    required: false
+    default: "100"
+  medium-threshold:
+    description: "Max total changed lines (add+del) for size/M."
+    required: false
+    default: "300"
+  large-threshold:
+    description: "Max total changed lines (add+del) for size/L."
+    required: false
+    default: "800"
+  max-files-warning:
+    description: "Warn if changed files exceed this count."
+    required: false
+    default: "25"
+runs:
+  using: "node20"
+  main: "dist/index.js"
