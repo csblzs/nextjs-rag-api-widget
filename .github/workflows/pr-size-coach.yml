@@ -1,0 +1,21 @@
+name: PR Size Coach
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  pull-requests: write
+  issues: write
+
+jobs:
+  coach:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: PR Size Coach
+        uses: ./.github/actions/pr-size-coach
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          add-labels: "true"
+          comment: "true"
